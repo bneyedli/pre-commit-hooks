@@ -1,0 +1,61 @@
+- id: python-black
+  name: Python black
+  description: Python black code formatter
+  entry: black
+  pass_filenames: true
+  language: python
+  types: [python]
+- id: python-flake8
+  name: Python flake8
+  description: Python flake8 code checker
+  entry: flake8 --max-line-length 88
+  pass_filenames: true
+  language: python
+  types: [python]
+- id: python-pylint
+  name: Python lint wrapper
+  description: Python linter
+  entry: pylint_wrapper.sh
+  pass_filenames: true
+  language: script
+  types: [python]
+  verbose: true
+- id: python-bandit
+  name: Python bandit wrapper
+  description: Python bandit SAST analyzer
+  entry: bandit -x tests
+  pass_filenames: true
+  language: python
+  types: [python]
+- id: python-isort
+  name: Python isort
+  description: Python sort imports
+  entry: isort --profile black
+  pass_filenames: true
+  language: python
+  types: [python]
+- id: python-mypy
+  name: Python mypy wrapper
+  description: Python type checker
+  entry: mypy_wrapper.sh
+  pass_filenames: true
+  language: script
+  types: [python]
+  verbose: true
+- id: python-pytype
+  name: Python pytype wrapper
+  description: Python type inferencer
+  entry: pytype_wrapper.sh
+  pass_filenames: true
+  language: script
+  types: [python]
+  verbose: true
+- id: python-semgrep
+  name: Python semgrep
+  description: Python static analysis
+  entry:  semgrep --config "p/python"
+  pass_filenames: true
+  language: system
+  types: [python]
+  files: \.py$
+  verbose: true
