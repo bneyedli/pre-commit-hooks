@@ -3,21 +3,21 @@
   description: Python black code formatter
   entry: poetry run black
   pass_filenames: true
-  language: python
+  language: system
   types: [python]
 - id: python-flake8
   name: Python flake8
   description: Python flake8 code checker
   entry: poetry run flake8 --max-line-length 88
   pass_filenames: true
-  language: python
+  language: system
   types: [python]
 - id: python-pylint
   name: Python lint wrapper
   description: Python linter
   entry: poetry run pylint
   pass_filenames: true
-  language: script
+  language: system
   types: [python]
   verbose: true
 - id: python-bandit
@@ -25,21 +25,21 @@
   description: Python bandit SAST analyzer
   entry: poetry run bandit -x tests
   pass_filenames: true
-  language: python
+  language: system
   types: [python]
 - id: python-isort
   name: Python isort
   description: Python sort imports
   entry: poetry run isort --profile black
   pass_filenames: true
-  language: python
+  language: system
   types: [python]
 - id: python-mypy
   name: Python mypy wrapper
   description: Python type checker
   entry: poetry run mypy --disallow-untyped-defs
   pass_filenames: true
-  language: script
+  language: system
   types: [python]
   verbose: true
 - id: python-pytype
@@ -47,7 +47,7 @@
   description: Python type inferencer
   entry: poetry run pytype
   pass_filenames: true
-  language: script
+  language: system
   types: [python]
   verbose: true
 - id: python-semgrep
