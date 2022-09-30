@@ -8,7 +8,7 @@
 - id: python-flake8
   name: Python flake8
   description: Python flake8 code checker
-  entry: poetry run flake8 --max-line-length 88
+  entry: poetry run flake8 --max-line-length 91
   pass_filenames: true
   language: system
   types: [python]
