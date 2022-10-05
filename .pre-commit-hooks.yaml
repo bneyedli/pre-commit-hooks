@@ -59,3 +59,12 @@
   types: [python]
   files: \.py$
   verbose: true
+- id: sh-shellcheck
+  name: Shellcheck
+  description: Shellcheck
+  entry: shellcheck
+  pass_filenames: true
+  language: system
+  types: [shell]
+  files: \.sh$
+  verbose: true
