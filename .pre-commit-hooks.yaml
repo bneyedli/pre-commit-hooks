@@ -45,7 +45,7 @@
 - id: python-pytype
   name: Python pytype wrapper
   description: Python type inferencer
-  entry: poetry run pytype
+  entry: poetry run pytype --config pytype.cfg
   pass_filenames: true
   language: system
   types: [python]
